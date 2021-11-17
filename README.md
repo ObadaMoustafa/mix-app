@@ -42,9 +42,15 @@ to run tests execute this line in the same root path
 npm run test
 ```
 
-# Styling
+# Styling and used APIs
 
 in this project I followed [xe website's](https://www.xe.com/) style, I tried to use same colors and buttons and every thing
+
+---
+
+For exchange currencies I used [ExchangeRate-api website](https://www.exchangerate-api.com/)].
+
+For Photo gallery I used [PlaceIMG website](http://placeimg.com/)].
 
 # Project folder structure
 
@@ -91,3 +97,23 @@ in this project I followed [xe website's](https://www.xe.com/) style, I tried to
           |     | test com
           |     | test com
 ```
+
+# Project features plan
+
+## Must have features
+
+1. App should have a list of the available currencies.
+2. User should be able to choose the currency to compare exchange rates with all currencies.
+3. User should be able to compare between specific two currencies.
+4. User should be able to go to home screen from every page e.g. by clicking the logo.
+5. user has a photo gallery section.
+6. User can set the width and height to generate random photo.
+7. User can also choose category.
+8. User can get the ready link to use in his img src and see a a photo also on the screen.
+
+## nice to have
+
+1. User can switch the pair of currencies to see the opposite rate of the same pair of currencies.
+2. User can see history of his exchange rate requests and delete it.
+3. User can download the photo.
+4. When use click to generate the photo pop up
