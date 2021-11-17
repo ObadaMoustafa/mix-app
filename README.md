@@ -32,8 +32,8 @@ npm run test
 
 
 
-#Styling
+# Styling
 in this project I followed [xe website's](https://www.xe.com/) style, I tried to use same colors and buttons and every thing
 
-#Project folder structure
+# Project folder structure
 
