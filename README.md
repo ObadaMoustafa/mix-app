@@ -25,7 +25,7 @@ npm i
 ```
 
 then in the root project folder `Mix` you have to create `.env` file and put your own api key from this [exchange money website](https://www.exchangerate-api.com/)
-and use this variable name `exchange_rate_APIKEY`
+and use this variable name `exchange_rate_APIKEY={put your api key after the equal sign without quotes }` :sweat_smile:
 
 > _Note: you have to make your own account if you don't have ((( **it's free** )))._
 
