@@ -17,7 +17,7 @@ git clone https://github.com/ObadaElSharbatly/Mix.git
 ```
 
 ```
-cd Mix
+cd "Mix/mix-app"
 ```
 
 ```
@@ -30,13 +30,13 @@ and use this variable name `exchange_rate_APIKEY`
 > _Note: you have to make your own account if you don't have ((( **it's free** )))._
 
 then it's ready to use
-simply go to you cli I in the root folder of project and excute
+simply go to you cli I in the root folder of project `mix-app` and execute
 
 ```
 npm start
 ```
 
-to run tests excute this line in the same root path
+to run tests execute this line in the same root path
 
 ```
 npm run test
@@ -57,8 +57,6 @@ in this project I followed [xe website's](https://www.xe.com/) style, I tried to
     |  package.json
     |
     |_____public
-    |     | index.html
-    |     | anotherFile
     |
     |_____src
           | setupTests.js
