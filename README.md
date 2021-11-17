@@ -18,5 +18,22 @@ npm i
 ```
 then in the root project folder `Mix` you have to create `.inv` file and put your own api key from this [exchange money website](https://www.exchangerate-api.com/)
 and use this variable name `exchange_rate_APIKEY`
-> Note: you have to make your own account if you don't have `it's free`
+> *Note: you have to make your own account if you don't have ((( __it's free__ ))).*
+
+then it's ready to use
+simply go to you cli I in the root folder of project and excute
+```
+npm start
+```
+to run tests excute this line in the same root path
+```
+npm run test
+```
+
+
+
+#Styling
+in this project I followed [xe website's](https://www.xe.com/) style, I tried to use same colors and buttons and every thing
+
+#Project folder structure
 
