@@ -48,7 +48,9 @@ in this project I followed [xe website's](https://www.xe.com/) style, I tried to
 
 ---
 
-For exchange currencies I used [ExchangeRate-api website](https://www.exchangerate-api.com/).
+For exchanging currencies I used [ExchangeRate-api website](https://www.exchangerate-api.com/).
+
+For getting flags by currency I used [react-currency-flags npm](https://www.npmjs.com/package/react-currency-flags).
 
 For Photo gallery I used [PlaceIMG website](http://placeimg.com/).
 
@@ -96,6 +98,11 @@ For Photo gallery I used [PlaceIMG website](http://placeimg.com/).
           |     | test com
           |     | test com
           |     | test com
+          |
+          |_____img
+          |     | logo.png
+          |     | logo.png
+          |     | logo.png
 ```
 
 # Project features plan
@@ -117,3 +124,4 @@ For Photo gallery I used [PlaceIMG website](http://placeimg.com/).
 2. User can see history of his exchange rate requests and delete it.
 3. User can download the photo.
 4. When use click to generate the photo pop up
+5. put logo for tab

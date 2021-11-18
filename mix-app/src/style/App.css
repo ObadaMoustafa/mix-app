@@ -1,0 +1,46 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+:root {
+    --main-width: 900px;
+    --nav-height: 100px;
+}
+
+#app {
+    display: flex;
+    justify-content: center;
+}
+
+.main-container{
+    transform: translateY(-250px);
+    display: flex;
+    flex-direction: column;
+    width: var(--main-width);
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.exchange-box{
+    flex-grow: 1;
+    max-width: 100%;
+    min-height: 500px;
+    border: 1px solid black;
+    background-color: #fff;
+}
+
+/* media query for changing root properties */
+@media screen and (max-width: 900px) {
+    :root {
+        --main-width: 80%;
+    }
+ }
+
+@media screen and (max-width: 360px) {
+    :root {
+        --main-width: 90%;
+    }
+ }
+
