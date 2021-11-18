@@ -24,7 +24,7 @@ cd "Mix/mix-app"
 npm i
 ```
 
-then in the root project folder `Mix` you have to create `.env` file and put your own api key from this [exchange money website](https://www.exchangerate-api.com/)
+then in the root project folder `mix-app` you have to create `.env` file and put your own api key from this [exchange money website](https://www.exchangerate-api.com/)
 and use this variable name `exchange_rate_APIKEY={put your api key after the equal sign without quotes }` :sweat_smile:
 
 > _Note: you have to make your own account if you don't have ((( **it's free** )))._
@@ -48,9 +48,9 @@ in this project I followed [xe website's](https://www.xe.com/) style, I tried to
 
 ---
 
-For exchange currencies I used [ExchangeRate-api website](https://www.exchangerate-api.com/)].
+For exchange currencies I used [ExchangeRate-api website](https://www.exchangerate-api.com/).
 
-For Photo gallery I used [PlaceIMG website](http://placeimg.com/)].
+For Photo gallery I used [PlaceIMG website](http://placeimg.com/).
 
 # Project folder structure
 
