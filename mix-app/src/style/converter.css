@@ -1,0 +1,10 @@
+.exchange-box{
+    transform: translateY(var(--transY));
+    width: 100%;
+    min-height: 500px;
+    border: 1px solid black;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
