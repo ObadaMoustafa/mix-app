@@ -9,7 +9,14 @@
 :root {
     --main-width: 900px;
     --nav-height: 100px;
-    --transY:-250px;
+    --transY:-100px;
+    --bg-color: rgb(10, 20, 110);
+    --btn-color: rgb(0, 113, 235);
+    --btn-color-hover: rgb(120, 183, 251);
+    --btn-font-size: 15pt;
+    --input-width: 250px;
+    --input-height: 45px;
+    --border-radius: 17px;
 }
 
 #app {
@@ -31,12 +38,13 @@
 @media screen and (max-width: 900px) {
     :root {
         --main-width: 80%;
+        --input-width: 100%;
     }
- }
+}
 
 @media screen and (max-width: 360px) {
     :root {
         --main-width: 90%;
     }
- }
+}
 

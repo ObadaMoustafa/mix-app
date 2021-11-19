@@ -1,7 +1,7 @@
 @import './App.css';
 
 header {
-    background-color: rgb(10, 20, 110);
+    background-color: var(--bg-color);
     color: white;
     height: 500px;
     display: flex;
@@ -43,6 +43,7 @@ div.routes {
      display: flex;
      justify-content: center;
      align-items: center;
+     font-size: var(--btn-font-size);
  }
 
  div.routes>div:hover {

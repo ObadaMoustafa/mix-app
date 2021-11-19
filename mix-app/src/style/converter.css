@@ -1,10 +1,125 @@
-.exchange-box{
+.converter-container{
     transform: translateY(var(--transY));
     width: 100%;
-    min-height: 500px;
     border: 1px solid black;
     background-color: #fff;
+    border-radius: var(--border-radius);
+    padding: 25px 25px;
+}
+
+.convert-title {
+    font-size: var(--btn-font-size);
+    color: var(--btn-color);
+}
+
+.convert-title:hover {
+    opacity: .2;
+}
+
+.exchange-box {
+    color: red;
     display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.exchange-form{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+/* ********for options******* */
+.convert-options{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin: 25px 0px;
+}
+
+
+
+select {
+    width: 100%;
+    height: var(--input-height);
+}
+option {
+    height: 50px;
+    color: red;
+    padding: 15px;
+}
+input {
+    width: 100%;
+    height: var(--input-height);
+}
+.amount, .from-to {
+    width: var(--input-width);
+}
+
+.switch-btn {
+    border: .5px solid black;
+    height: var(--input-height);
+    width: var(--input-height);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+
+}
+
+.switch-btn>i {
+    font-size: 12pt;
+    font-weight: bold;
+    color: var(--btn-color);
+}
+
+.field {
+    border: 2px solid black;
+}
+/* ******** for result and convert button ******* */
+.get-convert-result{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.country-list-item{
+    color: black;
+}
+
+.filled-btn{
+    background-color:var(--btn-color);
+    color: white;
+    padding: 15px;
+    font-size: var(--btn-font-size);
+    border-radius: var(--border-radius);
+    border: none;
+    cursor: pointer;
+}
+.filled-btn:disabled{
+    background-color: var(--btn-color-hover);
+    cursor: default;
+}
+.filled-btn:hover{
+    
+    background-color: var(--btn-color-hover); 
+}
+
+/****** media query for changing root properties *******/
+
+@media screen and (max-width: 900px) {
+    
+    .convert-options{
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    
 }

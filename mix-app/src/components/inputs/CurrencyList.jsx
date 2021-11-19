@@ -1,21 +1,22 @@
 import React, { useEffect, useState } from "react";
 import CurrencyFlag from "react-currency-flags";
-import "../../style/currencyList.css";
 function CurrencyList({ label, selectedCurrency, setSelectedCurrency, data }) {
     function handleSelectCurrency(e) {
         setSelectedCurrency(e.target.value);
     }
     console.log("data", data);
     return (
-        <div>
-            <CurrencyFlag currency={selectedCurrency} size='xl' />
+        <div className='from-to'>
             <label htmlFor={label}>{label.toUpperCase()}</label>
+            <br />
+            <CurrencyFlag currency={selectedCurrency} size='xl' />
             <br />
             <select
                 name={label}
                 id={label}
                 value={selectedCurrency}
-                onChange={handleSelectCurrency}>
+                onChange={handleSelectCurrency}
+                className='field'>
                 {/* ___setting options___ */}
                 {data?.supported_codes.length > 0 &&
                     data.supported_codes
