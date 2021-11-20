@@ -44,7 +44,7 @@ function ConverterForm() {
                     data={data}
                 />
                 <div className='switch-btn'>
-                    <i class='bi bi-arrow-left-right'></i>
+                    <i className='bi bi-arrow-left-right'></i>
                 </div>
 
                 <CurrencyList
