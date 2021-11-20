@@ -9,16 +9,17 @@
 }
 :root {
     --main-width: 900px;
-    --nav-height: 100px;
+    --nav-height: 64px;
     --transY:-100px;
     --bg-color: rgb(10, 20, 110);
     --btn-color: rgb(0, 113, 235);
     --btn-color-hover: rgb(38, 151, 255);
     --btn-color-disabled: rgb(138, 196, 250);
-    --btn-font-size: 15pt;
+    --btn-font-size: 13pt;
     --input-width: 250px;
     --input-height: 45px;
     --border-radius: 10px;
+    --footer-c-with: 200px;
 }
 
 #app {

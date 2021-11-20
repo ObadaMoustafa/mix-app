@@ -1,20 +1,23 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import logo from "../../img/logo.png";
 
 function Nav(props) {
     return (
-        <div>
-            <nav>
+        <nav>
+            <div>
                 <div className='logo'>
-                    <img src={logo} alt='logo' width='100' />
+                    <Link to='/'>
+                        <img src={logo} alt='logo' width='100' />
+                    </Link>
                 </div>
                 <div className='routes'>
                     <div>Converter</div>
                     <div>Rates</div>
                     <div>Photos</div>
                 </div>
-            </nav>
-        </div>
+            </div>
+        </nav>
     );
 }
 

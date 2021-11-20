@@ -1,7 +1,8 @@
 import Header from "./components/header/Header";
-import Converter from "./components/converter/Converter";
 import { ConverterContextProv } from "./context/ConverterContext";
 import "./style/App.css";
+import { Outlet } from "react-router";
+import Footer from "./components/footer/Footer";
 function App() {
     return (
         <div>
@@ -10,10 +11,11 @@ function App() {
             <div id='app'>
                 <div className='main-container'>
                     <ConverterContextProv>
-                        <Converter />
+                        <Outlet />
                     </ConverterContextProv>
                 </div>
             </div>
+            <Footer />
         </div>
     );
 }
