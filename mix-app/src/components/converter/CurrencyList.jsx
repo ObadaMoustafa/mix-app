@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import CurrencyFlag from "react-currency-flags";
 function CurrencyList({ label, selectedCurrency, setSelectedCurrency, data }) {
     function handleSelectCurrency(e) {
@@ -18,6 +18,7 @@ function CurrencyList({ label, selectedCurrency, setSelectedCurrency, data }) {
                 onChange={handleSelectCurrency}
                 className='field'>
                 {/* ___setting options___ */}
+
                 {data?.supported_codes.length > 0 &&
                     data.supported_codes
                         .sort((a, b) => a > b)
