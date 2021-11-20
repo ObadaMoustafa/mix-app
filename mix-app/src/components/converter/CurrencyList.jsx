@@ -7,14 +7,14 @@ function CurrencyList({ label, selectedCurrency, setSelectedCurrency, data }) {
     console.log("data", data);
     return (
         <div className='from-to'>
-            <label htmlFor={label}>{label.toUpperCase()}</label>
-            <br />
-            <CurrencyFlag
-                currency={selectedCurrency}
-                size='xl'
-                className='flag'
-            />
-            <br />
+            <div className='flex-label'>
+                <label htmlFor={label}>{label.toUpperCase()}: </label>
+                <CurrencyFlag
+                    currency={selectedCurrency}
+                    size='xl'
+                    className='flag'
+                />
+            </div>
             <select
                 name={label}
                 id={label}

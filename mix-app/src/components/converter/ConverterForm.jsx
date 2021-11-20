@@ -34,6 +34,7 @@ function ConverterForm() {
                         value={amount}
                         onChange={handleChangeAmount}
                         className='field'
+                        min='0'
                     />
                 </div>
                 <CurrencyList

@@ -1,7 +1,7 @@
 .converter-container{
     transform: translateY(var(--transY));
     width: 100%;
-    border: 1px solid black;
+    box-shadow: rgb(134, 134, 134) 0px 0px 10px;
     background-color: #fff;
     border-radius: var(--border-radius);
     padding: 25px 25px;
@@ -17,12 +17,13 @@
 }
 
 .exchange-box {
-    color: red;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
 }
+
+/* *** for converter Form *** */
 .exchange-form{
     width: 100%;
     display: flex;
@@ -40,23 +41,44 @@
     margin: 25px 0px;
 }
 
-
-
-select {
+.field {
     width: 100%;
     height: var(--input-height);
+    margin-top: 5px;
+    padding-left: 10px;
+    font-size: 11pt;
+    font-weight: bold;
+    color: var(--bg-color);
+    border: .5px solid rgb(160, 160, 160);
+    border-radius: var(--border-radius);
+    box-shadow: rgb(192, 192, 192) 0px 0px 3px;
 }
-option {
-    height: 50px;
-    color: red;
-    padding: 15px;
+
+.convert-options label {
+    font-weight: bold;
+    margin-right: 10px;
 }
-input {
-    width: 100%;
-    height: var(--input-height);
+
+.flex-label {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
 }
-.amount, .from-to {
+
+.from-to .flag {
+    margin-top: 5px;
+
+}
+.from-to option {
+    font-size: 11pt;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.amount, .from-to, .switch-btn {
     width: var(--input-width);
+    margin-top: 10px;
+    height: auto;
 }
 
 .switch-btn {
@@ -67,7 +89,8 @@ input {
     align-items: center;
     justify-content: center;
     border-radius: 50%;
-
+    border: .5px solid rgb(160, 160, 160);
+box-shadow: rgb(192, 192, 192) 0px 0px 3px;
 }
 
 .switch-btn>i {
@@ -76,20 +99,12 @@ input {
     color: var(--btn-color);
 }
 
-.field {
-    border: 2px solid black;
-}
 /* ******** for result and convert button ******* */
 .get-convert-result{
     width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-}
-
-
-.country-list-item{
-    color: black;
 }
 
 .filled-btn{
@@ -102,12 +117,13 @@ input {
     cursor: pointer;
 }
 .filled-btn:disabled{
-    background-color: var(--btn-color-hover);
+    background-color: var(--btn-color-disabled);
     cursor: default;
 }
 .filled-btn:hover{
     
-    background-color: var(--btn-color-hover); 
+    background-color: var(--btn-color-hover);
+    text-shadow: black 0 0 1px;
 }
 
 /****** media query for changing root properties *******/

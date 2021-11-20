@@ -124,7 +124,7 @@ For Photo gallery I used [PlaceIMG website](http://placeimg.com/).
 4. User should be able to go to home screen from every page e.g. by clicking the logo.
 5. user has a photo gallery section.
 6. User can set the width and height to generate random photo.
-7. User can also choose category.
+7. User can also choose category of photo.
 8. User can get the ready link to use in his img src and see a a photo also on the screen.
 
 ## nice to have
