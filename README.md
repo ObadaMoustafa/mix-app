@@ -17,20 +17,20 @@ git clone https://github.com/ObadaElSharbatly/Mix.git
 ```
 
 ```
-cd "Mix/mix-app"
+cd mix-app
 ```
 
 ```
 npm i
 ```
 
-then in the root project folder `mix-app` you have to create `.env` file and put your own api key from this [exchange money website](https://www.exchangerate-api.com/)
-and use this variable name `exchange_rate_APIKEY={put your api key after the equal sign without quotes }` :sweat_smile:
+then in the root project folder `mix-app` you have to create `.env` file and put your own api key from this [exchange money API website](https://www.exchangerate-api.com/)
+and use this variable name `REACT_APP_EXCHANGE_RATE_APIKEY={put your api key after the equal sign without quotes }` :sweat_smile:
 
 > _Note: you have to make your own account if you don't have ((( **it's free** )))._
 
 then it's ready to use
-simply go to you cli I in the root folder of project `mix-app` and execute
+simply go to your CLI in the root folder of project `mix-app` and execute
 
 ```
 npm start
@@ -65,6 +65,7 @@ For Photo gallery I used [PlaceIMG website](http://placeimg.com/).
     |  package.json
     |
     |_____public
+    |     |index.html
     |
     |_____src
           | setupTests.js
@@ -72,25 +73,33 @@ For Photo gallery I used [PlaceIMG website](http://placeimg.com/).
           | App.js
           |
           |_____components
+          |     | Converter.jsx
           |     | com1
           |     | com1
-          |     | com1
-          |     | com1
+          |     |
+          |     |_____Header
+          |     |     |Header.jsx
+          |     |     |Nav.jsx
+          |     |
+          |     |_____inputs
+          |     |     |CurrencyList.jsx
+          |     |
+          |     |
           |
           |_____context
-          |     | context
+          |     | ConverterContext.js
           |     | context
           |     | context
           |
           |_____hooks
-          |     | hook
+          |     | useFetchCurrencyData.js
           |     | hook
           |     | hook
           |
           |_____style
-          |     | css file
-          |     | css file
-          |     | css file
+          |     | App.css
+          |     | header.css
+          |     | converter.css
           |
           |_______tests__
           |     | test com
