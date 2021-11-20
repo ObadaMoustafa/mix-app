@@ -1,16 +1,15 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useContext, useState } from "react";
 import { ConverterContext } from "../../context/ConverterContext";
 import { useFetchCurrencyData } from "../../hooks/useFetchCurrencyData";
 import CurrencyList from "./CurrencyList";
 
 function ConverterForm() {
     const [endpoint, setEndpoint] = useState(null);
-    const { data, pairResult } = useFetchCurrencyData("codes", endpoint);
+    const { data, conversionResult } = useFetchCurrencyData("codes", endpoint);
     const { from, to, ConvertAmount } = useContext(ConverterContext);
     const [selectedCurrencyFrom, setSelectedCurrencyFrom] = from;
     const [selectedCurrencyTo, setSelectedCurrencyTo] = to;
     const [amount, setAmount] = ConvertAmount;
-    const [conversionResult, setConversionResult] = useState(null);
     const [resultAmount, setResultAmount] = useState(null);
 
     function handleChangeAmount(e) {
@@ -23,24 +22,6 @@ function ConverterForm() {
         setResultAmount(amount);
     }
 
-    useEffect(() => {
-        if (pairResult) {
-            const {
-                base_code,
-                target_code,
-                conversion_rate,
-                conversion_result,
-                time_last_update_utc,
-            } = pairResult;
-            setConversionResult({
-                from: base_code,
-                to: target_code,
-                conversion_rate,
-                conversion_result,
-                last_updated: time_last_update_utc,
-            });
-        }
-    }, [pairResult]);
     if (conversionResult) console.log("conversionResult", conversionResult);
     return (
         <form onSubmit={handleSubmit} className='exchange-form'>
@@ -74,7 +55,7 @@ function ConverterForm() {
             </div>
             <div className='get-convert-result'>
                 <div className='convert-result'>
-                    {pairResult && conversionResult ? (
+                    {conversionResult ? (
                         <div>
                             <p>
                                 conversion rate 1 {conversionResult.from} ={" "}

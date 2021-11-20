@@ -9,7 +9,11 @@ function CurrencyList({ label, selectedCurrency, setSelectedCurrency, data }) {
         <div className='from-to'>
             <label htmlFor={label}>{label.toUpperCase()}</label>
             <br />
-            <CurrencyFlag currency={selectedCurrency} size='xl' />
+            <CurrencyFlag
+                currency={selectedCurrency}
+                size='xl'
+                className='flag'
+            />
             <br />
             <select
                 name={label}

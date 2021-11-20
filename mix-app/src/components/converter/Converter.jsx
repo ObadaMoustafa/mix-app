@@ -1,7 +1,5 @@
-import React, { useContext, useEffect, useState } from "react";
+import React from "react";
 import "../../style/converter.css";
-import { ConverterContext } from "../../context/ConverterContext";
-import { useFetchCurrencyData } from "../../hooks/useFetchCurrencyData";
 import ConverterForm from "./ConverterForm";
 
 function Converter() {

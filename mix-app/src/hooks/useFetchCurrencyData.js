@@ -2,11 +2,12 @@ import { useEffect, useState } from "react";
 
 export function useFetchCurrencyData(url, url2 = null) {
     const [data, setData] = useState(null);
-    const [pairResult, setPairResult] = useState(null);
+    const [conversionResult, setConversionResult] = useState(null);
+
 
     useEffect(() => {
         if (url) {
-            async function getCodes() {
+            async function getAvailableCodes() {
 
                 const { REACT_APP_EXCHANGE_RATE_APIKEY } = process.env
                 const endpoint = `https://v6.exchangerate-api.com/v6/${REACT_APP_EXCHANGE_RATE_APIKEY}/${url}`
@@ -21,13 +22,11 @@ export function useFetchCurrencyData(url, url2 = null) {
                     console.error(error)
                 }
             }
-            getCodes();
+            getAvailableCodes();
         }
-    }, [url])
 
-    useEffect(() => {
         if (url2) {
-            async function getCodes() {
+            async function getPairCurrencyResult() {
 
                 const { REACT_APP_EXCHANGE_RATE_APIKEY } = process.env
                 const endpoint = `https://v6.exchangerate-api.com/v6/${REACT_APP_EXCHANGE_RATE_APIKEY}/pair/${url2}`
@@ -37,15 +36,28 @@ export function useFetchCurrencyData(url, url2 = null) {
                     const res = await fetch(endpoint);
                     const jsonData = await res.json()
                     if (res.status !== 200) throw new Error(jsonData["error-type"])
-                    setPairResult(jsonData)
+                    const {
+                        base_code,
+                        target_code,
+                        conversion_rate,
+                        conversion_result,
+                        time_last_update_utc,
+                    } = jsonData;
+                    setConversionResult({
+                        from: base_code,
+                        to: target_code,
+                        conversion_rate,
+                        conversion_result,
+                        last_updated: time_last_update_utc,
+                    });
                 } catch (error) {
                     console.error(error)
                 }
             }
-            getCodes();
+            getPairCurrencyResult();
         }
-    }, [url2])
+    }, [url, url2])
 
-    return { data, pairResult }
+    return { data, conversionResult }
 }
 

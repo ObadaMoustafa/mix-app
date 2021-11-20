@@ -9,9 +9,9 @@ function Nav(props) {
                     <img src={logo} alt='logo' width='100' />
                 </div>
                 <div className='routes'>
-                    <div>Home</div>
-                    <div>exchange rates</div>
-                    <div>G photos</div>
+                    <div>Converter</div>
+                    <div>Rates</div>
+                    <div>Photos</div>
                 </div>
             </nav>
         </div>
