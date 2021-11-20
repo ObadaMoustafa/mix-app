@@ -1,2 +1,2 @@
 [build]
-  base = "mix=app/"
+  base = "mix-app/"
