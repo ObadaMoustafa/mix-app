@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import App from './App';
 import Converter from "./components/converter/Converter";
+import Rates from './components/rates/Rates';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
@@ -10,6 +11,7 @@ ReactDOM.render(
     <Routes>
       <Route path="/" element={ <App /> }>
         <Route path="/" element={ <Converter /> } />
+        <Route path="/rates" element={ <Rates /> } />
       </Route>
     </Routes>
   </Router>,

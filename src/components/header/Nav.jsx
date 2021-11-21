@@ -12,9 +12,17 @@ function Nav(props) {
                     </Link>
                 </div>
                 <div className='routes'>
-                    <div>Converter</div>
-                    <div>Rates</div>
-                    <div>Photos</div>
+                    <div>
+                        <Link to='/'>Converter</Link>
+                    </div>
+
+                    <div>
+                        <Link to='/rates'>Rates</Link>
+                    </div>
+
+                    <div>
+                        <Link to='/'>Photos</Link>
+                    </div>
                 </div>
             </div>
         </nav>

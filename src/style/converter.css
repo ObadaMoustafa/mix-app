@@ -1,30 +1,5 @@
-.converter-container{
-    transform: translateY(var(--transY));
-    width: 100%;
-    box-shadow: rgb(134, 134, 134) 0px 0px 10px;
-    background-color: #fff;
-    border-radius: var(--border-radius);
-    padding: 25px 25px;
-}
-
-.convert-title {
-    font-size: var(--btn-font-size);
-    color: var(--btn-color);
-}
-
-.convert-title:hover {
-    opacity: .2;
-}
-
-.exchange-box {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
-}
-
 /* *** for converter Form *** */
-.exchange-form{
+.exchange-form {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -32,7 +7,7 @@
     align-items: center;
 }
 /* ********for options******* */
-.convert-options{
+.convert-options {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
@@ -49,12 +24,12 @@
     font-size: 11pt;
     font-weight: bold;
     color: var(--bg-color);
-    border: .5px solid rgb(160, 160, 160);
+    border: 0.5px solid rgb(160, 160, 160);
     border-radius: var(--border-radius);
     box-shadow: rgb(192, 192, 192) 0px 0px 3px;
 }
 
-.convert-options label {
+label {
     font-weight: bold;
     margin-right: 10px;
 }
@@ -67,7 +42,6 @@
 
 .from-to .flag {
     margin-top: 5px;
-
 }
 .from-to option {
     font-size: 11pt;
@@ -75,40 +49,52 @@
     letter-spacing: 2px;
 }
 
-.amount, .from-to, .switch-btn {
+.amount,
+.from-to,
+.switch-btn {
     width: var(--input-width);
     margin-top: 10px;
     height: auto;
 }
 
+.field:hover,
+.switch-btn:hover {
+    box-shadow: rgb(192, 192, 192) 0px 0px 7px;
+}
+
+input .field:hover {
+    cursor: text !important;
+}
+
 .switch-btn {
-    border: .5px solid black;
+    border: 0.5px solid black;
     height: var(--input-height);
     width: var(--input-height);
     display: flex;
     align-items: center;
     justify-content: center;
     border-radius: 50%;
-    border: .5px solid rgb(160, 160, 160);
-box-shadow: rgb(192, 192, 192) 0px 0px 3px;
+    border: 0.5px solid rgb(160, 160, 160);
+    box-shadow: rgb(192, 192, 192) 0px 0px 3px;
+    cursor: pointer;
 }
 
-.switch-btn>i {
+.switch-btn > i {
     font-size: 12pt;
     font-weight: bold;
     color: var(--btn-color);
 }
 
 /* ******** for result and convert button ******* */
-.get-convert-result{
+.get-convert-result {
     width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.filled-btn{
-    background-color:var(--btn-color);
+.filled-btn {
+    background-color: var(--btn-color);
     color: white;
     padding: 15px;
     font-size: var(--btn-font-size);
@@ -116,26 +102,46 @@ box-shadow: rgb(192, 192, 192) 0px 0px 3px;
     border: none;
     cursor: pointer;
 }
-.filled-btn:disabled{
+.filled-btn:disabled {
     background-color: var(--btn-color-disabled);
     cursor: default;
 }
-.filled-btn:hover{
-    
+.filled-btn:hover {
     background-color: var(--btn-color-hover);
     text-shadow: black 0 0 1px;
+}
+
+.convert-result-container {
+    font-size: small;
+}
+
+.main-result {
+    font-size: x-large;
+    font-weight: 500;
+}
+
+.main-result > span {
+    font-size: xx-large !important;
+    font-weight: 500 !important;
+}
+.convert-result-container > p > span {
+    font-size: small;
+    font-weight: bold;
+}
+
+.converter-put-amount-msg > p {
+    font-size: large;
+    color: rgb(105, 105, 105);
 }
 
 /****** media query for changing root properties *******/
 
 @media screen and (max-width: 900px) {
-    
-    .convert-options{
+    .convert-options {
         flex-direction: column;
         align-items: center;
     }
 }
 
 @media screen and (max-width: 360px) {
-    
 }

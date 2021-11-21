@@ -6,14 +6,14 @@ It's a React project for `exchange currency rates` and other info and to get som
 
 # Try demo
 
-gonna put a link here when deploy it on netlify
+https://mix-converter.netlify.app/
 
 # Install and use locally
 
 1- clone it on your PC (e.g. Desktop) and open your cli in that location and execute this code
 
 ```
-git clone https://github.com/ObadaElSharbatly/Mix.git
+git clone https://github.com/ObadaElSharbatly/mix-app.git
 ```
 
 ```
@@ -57,61 +57,62 @@ For Photo gallery I used [PlaceIMG website](http://placeimg.com/).
 # Project folder structure
 
 ```
-|_ images (images for readme file only)
-|_ README.md
-|_ mix-app
-    |  .gitignore
-    |  package-lock.json
-    |  package.json
-    |
-    |_____public
-    |     |index.html
-    |
-    |_____src
-          | setupTests.js
-          | index.js
-          | App.js
-          |
-          |_____components
-          |     | Converter.jsx
-          |     | com1
-          |     | com1
-          |     |
-          |     |_____Header
-          |     |     |Header.jsx
-          |     |     |Nav.jsx
-          |     |
-          |     |_____inputs
-          |     |     |CurrencyList.jsx
-          |     |
-          |     |
-          |
-          |_____context
-          |     | ConverterContext.js
-          |     | context
-          |     | context
-          |
-          |_____hooks
-          |     | useFetchCurrencyData.js
-          |     | hook
-          |     | hook
-          |
-          |_____style
-          |     | App.css
-          |     | header.css
-          |     | converter.css
-          |
-          |_______tests__
-          |     | test com
-          |     | test com
-          |     | test com
-          |     | test com
-          |     | test com
-          |
-          |_____img
-          |     | logo.png
-          |     | logo.png
-          |     | logo.png
+mix-app (root directory)
+|   images (images for readme file only)
+|   README.md
+|   .env
+|   .gitignore
+|   package-lock.json
+|   package.json
+|
+|_____public
+|     |index.html
+|
+|_____src
+        | setupTests.js
+        | index.js
+        | App.js
+        |
+        |_____components
+        |     | Converter.jsx
+        |     | com1
+        |     | com1
+        |     |
+        |     |_____Header
+        |     |     |Header.jsx
+        |     |     |Nav.jsx
+        |     |
+        |     |_____inputs
+        |     |     |CurrencyList.jsx
+        |     |
+        |     |
+        |
+        |_____context
+        |     | ConverterContext.js
+        |     | context
+        |     | context
+        |
+        |_____hooks
+        |     | useFetchCurrencyData.js
+        |     | hook
+        |     | hook
+        |
+        |_____style
+        |     | App.css
+        |     | header.css
+        |     | converter.css
+        |
+        |_______tests__
+        |     | test com
+        |     | test com
+        |     | test com
+        |     | test com
+        |     | test com
+        |
+        |_____img
+        |     | logo.png
+        |     | logo.png
+        |     | logo.png
 ```
 
 # Project features plan
