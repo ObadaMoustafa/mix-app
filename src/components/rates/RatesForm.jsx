@@ -8,7 +8,7 @@ import SubmitButton from "../inputs/SubmitButton";
 function RatesForm() {
     const { data } = useFetchCurrencyData("codes", null);
     const { from, ConvertAmount } = useContext(ConverterContext);
-    const [amount, setAmount] = ConvertAmount;
+    const [amount] = ConvertAmount;
 
     // extracting values from context
     const [selectedCurrencyFrom, setSelectedCurrencyFrom] = from;
