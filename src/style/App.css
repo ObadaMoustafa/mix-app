@@ -21,6 +21,7 @@
     --border-radius: 10px;
     --footer-c-with: 130px;
     --field-shadow: rgb(192 192 192) 0px 0px 3px;
+    --rate-con-width: 150px;
 }
 
 #app {
@@ -73,8 +74,9 @@
     }
 }
 
-@media screen and (max-width: 360px) {
+@media screen and (max-width: 361px) {
     :root {
-        --main-width: 90%;
+        --main-width: 95%;
+        --rate-con-width: 300px;
     }
 }
