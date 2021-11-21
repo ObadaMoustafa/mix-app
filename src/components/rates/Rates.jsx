@@ -14,7 +14,7 @@ function Rates() {
         const ratesElements = [];
         for (const key in rates) {
             ratesElements.push(
-                <div key={key} className='one-currency-rate'>
+                <div key={key} className='one-currency-rate-container'>
                     <CurrencyFlag currency={key} size='xl' className='flag' />
                     <p>
                         {key} = {rates[key]}
