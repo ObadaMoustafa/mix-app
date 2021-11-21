@@ -1,0 +1,26 @@
+.all-rates {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.one-currency-rate {
+    width: 150px;
+    margin: 5px;
+    box-shadow: var(--field-shadow);
+    border-radius: var(--border-radius);
+    padding: 3px;
+}
+
+.one-currency-rate > p {
+    font-weight: bold;
+    margin-top: 5px;
+    color: var(--bg-color);
+}
+
+.rates-form {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    margin-bottom: 25px;
+}

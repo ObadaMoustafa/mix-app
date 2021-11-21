@@ -2,27 +2,28 @@ import React, { useContext } from "react";
 import { ConverterContext } from "../../context/ConverterContext";
 import { useFetchCurrencyData } from "../../hooks/useFetchCurrencyData";
 import CurrencyList from "../inputs/CurrencyList";
-import Input from "../inputs/Input";
 import SubmitButton from "../inputs/SubmitButton";
 
-function RatesForm() {
-    const { data } = useFetchCurrencyData("codes", null);
-    const { from, ConvertAmount } = useContext(ConverterContext);
-    const [amount] = ConvertAmount;
-
+function RatesForm({ setEndpoint }) {
+    const { data } = useFetchCurrencyData("codes");
+    const { from } = useContext(ConverterContext);
     // extracting values from context
     const [selectedCurrencyFrom, setSelectedCurrencyFrom] = from;
+
+    function handleSubmit(e) {
+        e.preventDefault();
+        setEndpoint(selectedCurrencyFrom);
+    }
     return (
         <>
-            <form action=''>
+            <form onSubmit={handleSubmit} className='rates-form'>
                 <CurrencyList
                     label='Rates for'
                     selectedCurrency={selectedCurrencyFrom}
                     setSelectedCurrency={setSelectedCurrencyFrom}
                     data={data}
                 />
-                <Input />
-                <SubmitButton amount={amount} text='Submit' />
+                <SubmitButton text='Submit' />
             </form>
         </>
     );
