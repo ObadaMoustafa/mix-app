@@ -26,7 +26,7 @@
     color: var(--bg-color);
     border: 0.5px solid rgb(160, 160, 160);
     border-radius: var(--border-radius);
-    box-shadow: rgb(192, 192, 192) 0px 0px 3px;
+    box-shadow: var(--field-shadow);
 }
 
 label {
@@ -40,9 +40,6 @@ label {
     align-items: center;
 }
 
-.from-to .flag {
-    margin-top: 5px;
-}
 .from-to option {
     font-size: 11pt;
     font-weight: bold;
@@ -96,11 +93,13 @@ input .field:hover {
 .filled-btn {
     background-color: var(--btn-color);
     color: white;
-    padding: 15px;
+    padding: 0 15px;
     font-size: var(--btn-font-size);
     border-radius: var(--border-radius);
     border: none;
     cursor: pointer;
+    margin-left: 15px;
+    height: var(--input-height);
 }
 .filled-btn:disabled {
     background-color: var(--btn-color-disabled);

@@ -1,8 +1,9 @@
 import { useEffect, useState } from "react";
 
-export function useFetchCurrencyData(url, url2 = null) {
+export function useFetchCurrencyData(url = null, url2 = null, url3 = null) {
     const [data, setData] = useState(null);
     const [conversionResult, setConversionResult] = useState(null);
+    const [rates, setRates] = useState(null);
 
 
     useEffect(() => {
@@ -56,8 +57,27 @@ export function useFetchCurrencyData(url, url2 = null) {
             }
             getPairCurrencyResult();
         }
-    }, [url, url2])
 
-    return { data, conversionResult }
+        if (url3) {
+            async function getAllRates() {
+
+                const { REACT_APP_EXCHANGE_RATE_APIKEY } = process.env
+                const endpoint = `https://v6.exchangerate-api.com/v6/${REACT_APP_EXCHANGE_RATE_APIKEY}/latest/${url3}`
+                console.log("3rd endpoint =", endpoint)
+                console.log("requester latest rates")
+                try {
+                    const res = await fetch(endpoint);
+                    const jsonData = await res.json()
+                    if (res.status !== 200) throw new Error(jsonData["error-type"])
+                    setRates(jsonData.conversion_rates);
+                } catch (error) {
+                    console.error(error)
+                }
+            }
+            getAllRates();
+        }
+    }, [url, url2, url3])
+
+    return { data, conversionResult, rates }
 }
 

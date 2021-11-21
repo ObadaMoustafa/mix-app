@@ -20,6 +20,7 @@
     --input-height: 45px;
     --border-radius: 10px;
     --footer-c-with: 130px;
+    --field-shadow: rgb(192 192 192) 0px 0px 3px;
 }
 
 #app {
@@ -58,6 +59,10 @@
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
+}
+
+.flag {
+    border-radius: var(--border-radius);
 }
 
 /* media query for changing root properties */

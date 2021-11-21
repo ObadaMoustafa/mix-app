@@ -6,7 +6,7 @@ function SubmitButton({ amount, text }) {
             <button
                 type='submit'
                 className='filled-btn'
-                disabled={amount > 0 ? false : true}>
+                disabled={!amount || amount > 0 ? false : true}>
                 {text}
             </button>
         </>
