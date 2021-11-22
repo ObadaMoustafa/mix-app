@@ -133,3 +133,9 @@ mix-app (root directory)
 
 -   [x] User can switch the pair of currencies to see the opposite rate of the same pair of currencies.
 -   [x] User can see history of his exchange rate requests and delete it.
+
+## Issues
+please feel free to use issues and we gonna answer as soon as possible
+
+## MIT License
+[MIT](https://github.com/ObadaElSharbatly/mix-app/blob/main/LICENSE)
