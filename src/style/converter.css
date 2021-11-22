@@ -13,7 +13,7 @@
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: flex-end;
-    margin: 25px 0px;
+    margin-bottom: 25px;
 }
 
 .field {
@@ -56,7 +56,7 @@ label {
 
 .field:hover,
 .switch-btn:hover {
-    box-shadow: rgb(192, 192, 192) 0px 0px 7px;
+    box-shadow: var(--hover-shadow);
 }
 
 input .field:hover {
@@ -72,7 +72,7 @@ input .field:hover {
     justify-content: center;
     border-radius: 50%;
     border: 0.5px solid rgb(160, 160, 160);
-    box-shadow: rgb(192, 192, 192) 0px 0px 3px;
+    box-shadow: var(--field-shadow);
     cursor: pointer;
 }
 
@@ -110,6 +110,12 @@ input .field:hover {
     text-shadow: black 0 0 1px;
 }
 
+.filled-btn:disabled:hover {
+    background-color: var(--btn-color-disabled);
+    cursor: default;
+    text-shadow: none;
+}
+
 .convert-result-container {
     font-size: small;
 }
@@ -133,6 +139,55 @@ input .field:hover {
     color: rgb(105, 105, 105);
 }
 
+/****** Converter History *******/
+.history-container {
+    margin-bottom: 30px;
+    margin-top: 50px;
+}
+
+.history-line-container {
+    width: 100%;
+    box-shadow: var(--field-shadow);
+    border-radius: var(--border-radius);
+    padding: 10px 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 5px 0;
+}
+
+.exchange-operation {
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.history-from-to {
+    font-weight: bold;
+    width: 35%;
+    text-align: center;
+}
+
+.history-equal {
+    font-size: 15pt;
+    text-align: center;
+}
+
+.delete-history {
+    color: var(--bg-color);
+    cursor: pointer;
+    padding: 5px;
+    border-radius: var(--border-radius);
+}
+.delete-history:hover {
+    color: red;
+    box-shadow: var(--hover-shadow);
+}
+
+.delete-history:hover::before {
+    text-indent: "delete";
+}
+
 /****** media query for changing root properties *******/
 
 @media screen and (max-width: 900px) {
@@ -140,7 +195,13 @@ input .field:hover {
         flex-direction: column;
         align-items: center;
     }
+    .exchange-operation {
+        width: 100%;
+    }
+    .history-line-container {
+        flex-direction: column;
+    }
 }
 
-@media screen and (max-width: 360px) {
+@media screen and (max-width: 415px) {
 }

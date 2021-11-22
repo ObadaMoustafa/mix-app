@@ -60,23 +60,21 @@ For Photo gallery I used [PlaceIMG website](http://placeimg.com/).
 mix-app (root directory)
 |   images (images for readme file only)
 |   README.md
-|   .env
+|   LICENSE
 |   .gitignore
 |   package-lock.json
 |   package.json
 |
 |_____public
 |     |index.html
+|     |favicon.ico
 |
 |_____src
         | setupTests.js
         | index.js
-        | App.js
+        | App.jsx
         |
         |_____components
-        |     | Converter.jsx
-        |     | com1
-        |     | com1
         |     |
         |     |_____Header
         |     |     |Header.jsx
@@ -84,25 +82,34 @@ mix-app (root directory)
         |     |
         |     |_____inputs
         |     |     |CurrencyList.jsx
+        |     |     |Input.jsx
+        |     |     |SubmitButton.jsx
         |     |
+        |     |_____converter
+        |     |     |Converter.jsx
+        |     |     |ConverterForm.jsx
         |     |
+        |     |_____rates
+        |     |     |Rates.jsx
+        |     |     |RatesForm.jsx
+        |     |
+        |     |_____footer
+        |     |     |Footer.jsx
         |
         |_____context
         |     | ConverterContext.js
-        |     | context
-        |     | context
         |
         |_____hooks
         |     | useFetchCurrencyData.js
-        |     | hook
-        |     | hook
         |
-        |_____style
+        |_____ style
         |     | App.css
         |     | header.css
         |     | converter.css
+        |     | rates.css
+        |     | footer.css
         |
-        |_______tests__
+        |_____ __tests__
         |     | test com
         |     | test com
         |     | test com
@@ -110,8 +117,6 @@ mix-app (root directory)
         |     | test com
         |
         |_____img
-        |     | logo.png
-        |     | logo.png
         |     | logo.png
 ```
 

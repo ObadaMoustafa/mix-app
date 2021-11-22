@@ -19,10 +19,6 @@ function Nav(props) {
                     <div>
                         <Link to='/rates'>Rates</Link>
                     </div>
-
-                    <div>
-                        <Link to='/'>Photos</Link>
-                    </div>
                 </div>
             </div>
         </nav>

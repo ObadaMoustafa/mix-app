@@ -21,7 +21,9 @@
     --border-radius: 10px;
     --footer-c-with: 130px;
     --field-shadow: rgb(192 192 192) 0px 0px 3px;
+    --hover-shadow: rgb(192 192 192) 0px 0px 7px;
     --rate-con-width: 150px;
+    --container-padding: 25px;
 }
 
 #app {
@@ -33,8 +35,7 @@
     display: flex;
     flex-direction: column;
     width: var(--main-width);
-    margin-left: 15px;
-    margin-right: 15px;
+    margin: 0 15px;
 }
 
 .route-container {
@@ -43,7 +44,7 @@
     box-shadow: rgb(134, 134, 134) 0px 0px 10px;
     background-color: #fff;
     border-radius: var(--border-radius);
-    padding: 25px 25px;
+    padding: var(--container-padding);
 }
 
 .route-title {
@@ -60,6 +61,7 @@
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
+    margin-top: 25px;
 }
 
 .flag {
@@ -72,11 +74,15 @@
         --main-width: 80%;
         --input-width: 100%;
     }
+    .main-container {
+        margin: 0 10px;
+    }
 }
 
 @media screen and (max-width: 415px) {
     :root {
-        --main-width: 95%;
+        --main-width: 100%;
         --rate-con-width: 300px;
+        --container-padding: 10px;
     }
 }
