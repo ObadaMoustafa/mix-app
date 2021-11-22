@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { v4 as uuid } from "uuid";
 
 export function useFetchCurrencyData(url = null, url2 = null, url3 = null) {
     const [data, setData] = useState(null);
@@ -28,29 +29,26 @@ export function useFetchCurrencyData(url = null, url2 = null, url3 = null) {
 
         if (url2) {
             async function getPairCurrencyResult() {
-
+                const { selectedCurrencyFrom, selectedCurrencyTo, amount } = url2
                 const { REACT_APP_EXCHANGE_RATE_APIKEY } = process.env
-                const endpoint = `https://v6.exchangerate-api.com/v6/${REACT_APP_EXCHANGE_RATE_APIKEY}/pair/${url2}`
+                const endpoint = `https://v6.exchangerate-api.com/v6/${REACT_APP_EXCHANGE_RATE_APIKEY}/pair/${selectedCurrencyFrom}/${selectedCurrencyTo}/${amount}`
                 console.log("2nd endpoint =", endpoint)
                 console.log("requester pair rates")
                 try {
                     const res = await fetch(endpoint);
                     const jsonData = await res.json()
                     if (res.status !== 200) throw new Error(jsonData["error-type"])
-                    const {
-                        base_code,
-                        target_code,
-                        conversion_rate,
-                        conversion_result,
-                        time_last_update_utc,
-                    } = jsonData;
-                    setConversionResult({
-                        from: base_code,
-                        to: target_code,
-                        conversion_rate,
-                        conversion_result,
-                        last_updated: time_last_update_utc,
-                    });
+                    const convertRequest = {
+                        from: selectedCurrencyFrom,
+                        to: selectedCurrencyTo,
+                        amount: amount,
+                        result: jsonData.conversion_result,
+                        rate: jsonData.conversion_rate,
+                        update: jsonData.time_last_update_utc,
+                        id: uuid(),
+                    };
+                    console.log("convertRequest", convertRequest);
+                    setConversionResult(convertRequest);
                 } catch (error) {
                     console.error(error)
                 }

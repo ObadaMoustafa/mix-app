@@ -23,7 +23,7 @@ function RatesForm({ setEndpoint }) {
                     setSelectedCurrency={setSelectedCurrencyFrom}
                     data={data}
                 />
-                <SubmitButton text='Submit' />
+                <SubmitButton amount={5} text='Submit' />
             </form>
         </>
     );

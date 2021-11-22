@@ -8,15 +8,16 @@ footer {
     color: white;
 }
 
-footer>div {
+footer > div {
     width: var(--main-width);
+    margin: 0 10px;
 }
 
 footer ul {
     list-style: none;
 }
 
-footer ul>li {
+footer ul > li {
     margin-right: 25px;
     font-size: 13px;
 }
@@ -25,7 +26,7 @@ footer h4 {
     margin-bottom: 10px;
 }
 
-.flex-footer-row{
+.flex-footer-row {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -34,13 +35,12 @@ footer h4 {
     width: 100%;
 }
 
-
-.flex-footer-column{
+.flex-footer-column {
     max-width: var(--footer-c-with);
     margin-bottom: 25px;
 }
 
-.footer-app-info{
+.footer-app-info {
     display: flex;
     flex-direction: column;
 }
@@ -50,3 +50,8 @@ footer h4 {
     flex-wrap: wrap;
 }
 
+@media screen and (max-width: 415px) {
+    footer {
+        padding: 15px 10px;
+    }
+}
