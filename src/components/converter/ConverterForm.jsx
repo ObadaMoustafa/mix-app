@@ -29,8 +29,6 @@ function ConverterForm() {
         };
         setEndpoint(request);
         setAmount(0);
-
-        //** here I can manage to add every operation in a label array
     }
 
     function handleSwitchValue() {
@@ -40,12 +38,13 @@ function ConverterForm() {
 
     useEffect(() => {
         if (switchValue) setSelectedCurrencyTo(switchValue);
-        if (conversionResult) setHistory(prev => [...prev, conversionResult]);
-    }, [setSelectedCurrencyTo, switchValue, conversionResult, setHistory]);
+    }, [setSelectedCurrencyTo, switchValue]);
 
-    if (switchValue) console.log("switchValue", switchValue);
-    if (switchValue) console.log("switchValue type", typeof switchValue);
-    if (conversionResult) console.log("conversionResult", conversionResult);
+    // I need another useEffect not to be affected by other value changes.
+    useEffect(() => {
+        if (conversionResult) setHistory(prev => [...prev, conversionResult]);
+    }, [conversionResult, setHistory]);
+
     return (
         <form onSubmit={handleSubmit} className='exchange-form'>
             <div className='convert-options'>

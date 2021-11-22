@@ -13,8 +13,6 @@ export function useFetchCurrencyData(url = null, url2 = null, url3 = null) {
 
                 const { REACT_APP_EXCHANGE_RATE_APIKEY } = process.env
                 const endpoint = `https://v6.exchangerate-api.com/v6/${REACT_APP_EXCHANGE_RATE_APIKEY}/${url}`
-                console.log("1st endpoint =", endpoint)
-                console.log("requested usable codes")
                 try {
                     const res = await fetch(endpoint);
                     const jsonData = await res.json()
@@ -32,8 +30,6 @@ export function useFetchCurrencyData(url = null, url2 = null, url3 = null) {
                 const { selectedCurrencyFrom, selectedCurrencyTo, amount } = url2
                 const { REACT_APP_EXCHANGE_RATE_APIKEY } = process.env
                 const endpoint = `https://v6.exchangerate-api.com/v6/${REACT_APP_EXCHANGE_RATE_APIKEY}/pair/${selectedCurrencyFrom}/${selectedCurrencyTo}/${amount}`
-                console.log("2nd endpoint =", endpoint)
-                console.log("requester pair rates")
                 try {
                     const res = await fetch(endpoint);
                     const jsonData = await res.json()
@@ -47,7 +43,7 @@ export function useFetchCurrencyData(url = null, url2 = null, url3 = null) {
                         update: jsonData.time_last_update_utc,
                         id: uuid(),
                     };
-                    console.log("convertRequest", convertRequest);
+
                     setConversionResult(convertRequest);
                 } catch (error) {
                     console.error(error)
@@ -61,8 +57,6 @@ export function useFetchCurrencyData(url = null, url2 = null, url3 = null) {
 
                 const { REACT_APP_EXCHANGE_RATE_APIKEY } = process.env
                 const endpoint = `https://v6.exchangerate-api.com/v6/${REACT_APP_EXCHANGE_RATE_APIKEY}/latest/${url3}`
-                console.log("3rd endpoint =", endpoint)
-                console.log("requester latest rates")
                 try {
                     const res = await fetch(endpoint);
                     const jsonData = await res.json()

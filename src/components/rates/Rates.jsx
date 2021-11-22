@@ -25,8 +25,6 @@ function Rates() {
         setRatesElements(ratesElements);
     }, [rates]);
 
-    console.log(ratesElements);
-
     return (
         //! don't change route-container, route-title and content-box this allows the content to be inside the white box
         //! if I need any thing under the white box I should put under router-container div

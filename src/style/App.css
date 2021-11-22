@@ -1,10 +1,11 @@
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.1/font/bootstrap-icons.css");
+@import url("https://fonts.googleapis.com/css2?family=Shippori+Antique&display=swap");
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: "Shippori Antique", sans-serif;
     font-size: 12pt;
 }
 :root {

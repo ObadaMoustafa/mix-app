@@ -9,7 +9,7 @@ function Header(props) {
             <div>
                 <h1>Welcome to the Mix application</h1>
                 <h2 style={{ fontSize: "12pt" }}>
-                    Get the max out from our app by visiting about page
+                    React graduation project for HYF NL
                 </h2>
             </div>
         </header>

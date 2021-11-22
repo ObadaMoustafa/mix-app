@@ -4,7 +4,6 @@ function CurrencyList({ label, selectedCurrency, setSelectedCurrency, data }) {
     function handleSelectCurrency(e) {
         setSelectedCurrency(e.target.value);
     }
-    console.log("data", data);
     return (
         <div className='from-to'>
             <div className='flex-label'>
