@@ -5,6 +5,8 @@ export function useFetchCurrencyData(url = null, url2 = null, url3 = null) {
     const [data, setData] = useState(null);
     const [conversionResult, setConversionResult] = useState(null);
     const [rates, setRates] = useState(null);
+    const [isLoading, setIsLoading] = useState(false);
+    const [errMsg, setErrMsg] = useState(null);
 
 
     useEffect(() => {
@@ -18,8 +20,10 @@ export function useFetchCurrencyData(url = null, url2 = null, url3 = null) {
                     const jsonData = await res.json()
                     if (res.status !== 200) throw new Error(jsonData["error-type"])
                     setData(jsonData)
+                    setErrMsg(null)
                 } catch (error) {
-                    console.error(error)
+                    console.log(error)
+                    setErrMsg(error.toString())
                 }
             }
             getAvailableCodes();
@@ -45,8 +49,13 @@ export function useFetchCurrencyData(url = null, url2 = null, url3 = null) {
                     };
 
                     setConversionResult(convertRequest);
+                    setErrMsg(null)
                 } catch (error) {
-                    console.error(error)
+                    console.error(error);
+                    setErrMsg(error.toString())
+                }
+                finally {
+                    setIsLoading(false)
                 }
             }
             getPairCurrencyResult();
@@ -62,14 +71,18 @@ export function useFetchCurrencyData(url = null, url2 = null, url3 = null) {
                     const jsonData = await res.json()
                     if (res.status !== 200) throw new Error(jsonData["error-type"])
                     setRates(jsonData.conversion_rates);
+                    setErrMsg(null)
                 } catch (error) {
                     console.error(error)
+                    setErrMsg(error.toString())
+                } finally {
+                    setIsLoading(false)
                 }
             }
             getAllRates();
         }
     }, [url, url2, url3])
 
-    return { data, conversionResult, rates }
+    return { data, conversionResult, rates, isLoading, setIsLoading, errMsg }
 }
 

@@ -120,6 +120,17 @@ input .field:hover {
     font-size: small;
 }
 
+@keyframes fade-in-left {
+    0% {
+        transform: translateX(-50px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
 .main-result {
     font-size: x-large;
     font-weight: 500;
@@ -154,6 +165,8 @@ input .field:hover {
     justify-content: space-between;
     align-items: center;
     margin: 5px 0;
+
+    animation: fade-in-left 1.5s;
 }
 
 .exchange-operation {
