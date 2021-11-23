@@ -71,6 +71,14 @@ function Footer() {
                                     Fonts
                                 </a>
                             </li>
+                            <li>
+                                <a
+                                    href='https://animista.net/'
+                                    target='_blank'
+                                    rel='noreferrer'>
+                                    animation
+                                </a>
+                            </li>
                         </ul>
                     </div>
                     <div className='flex-footer-column'>
