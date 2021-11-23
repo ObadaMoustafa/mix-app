@@ -42,10 +42,10 @@ function Rates() {
                 </div>
                 <div className='all-rates'>
                     {errMsg && <p style={{ color: "red" }}>{errMsg}</p>}
-                    {isLoading && <p style={{ color: "red" }}>Loading ...</p>}
-                    {ratesElements.length > 0
-                        ? ratesElements.map(currency => currency)
-                        : ""}
+                    {isLoading && <div className='lds-hourglass'></div>}
+                    {ratesElements.length > 0 &&
+                        !isLoading &&
+                        ratesElements.map(currency => currency)}
                 </div>
             </div>
         </div>
