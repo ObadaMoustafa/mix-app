@@ -8,9 +8,7 @@ function Header(props) {
             <Nav />
             <div>
                 <h1>Welcome to the Mix application</h1>
-                <h2 style={{ fontSize: "12pt" }}>
-                    React graduation project for HYF NL
-                </h2>
+                <h2>React graduation project for HYF NL</h2>
             </div>
         </header>
     );

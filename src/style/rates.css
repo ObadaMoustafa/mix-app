@@ -10,6 +10,8 @@
     box-shadow: var(--field-shadow);
     border-radius: var(--border-radius);
     padding: 3px;
+
+    animation: fade-in-left 1.5s;
 }
 
 .one-currency-rate > p {

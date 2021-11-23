@@ -7,9 +7,9 @@ import RatesForm from "./RatesForm";
 
 function Rates() {
     const [endpoint, setEndpoint] = useState(null);
-    const { rates } = useFetchCurrencyData(null, null, endpoint);
-    const [ratesElements, setRatesElements] = useState(null);
-
+    const { data, setIsLoading, rates, isLoading, errMsg } =
+        useFetchCurrencyData("codes", null, endpoint);
+    const [ratesElements, setRatesElements] = useState([]);
     useEffect(() => {
         const ratesElements = [];
         for (const key in rates) {
@@ -34,10 +34,18 @@ function Rates() {
             </div>
             <div className='content-box'>
                 <div>
-                    <RatesForm setEndpoint={setEndpoint} />
+                    <RatesForm
+                        setEndpoint={setEndpoint}
+                        data={data}
+                        setIsLoading={setIsLoading}
+                    />
                 </div>
                 <div className='all-rates'>
-                    {ratesElements && ratesElements.map(currency => currency)}
+                    {errMsg && <p style={{ color: "red" }}>{errMsg}</p>}
+                    {isLoading && <p style={{ color: "red" }}>Loading ...</p>}
+                    {ratesElements.length > 0
+                        ? ratesElements.map(currency => currency)
+                        : ""}
                 </div>
             </div>
         </div>

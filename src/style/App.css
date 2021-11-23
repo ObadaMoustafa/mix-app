@@ -1,11 +1,11 @@
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.1/font/bootstrap-icons.css");
-@import url("https://fonts.googleapis.com/css2?family=Shippori+Antique&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;600&display=swap");
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Shippori Antique", sans-serif;
+    font-family: "Outfit", sans-serif;
     font-size: 12pt;
 }
 :root {
@@ -13,6 +13,7 @@
     --nav-height: 64px;
     --transY: -100px;
     --bg-color: rgb(10, 20, 110);
+    --nav-bg-color: rgba(10, 20, 110, 0.342);
     --btn-color: rgb(0, 113, 235);
     --btn-color-hover: rgb(38, 151, 255);
     --btn-color-disabled: rgb(138, 196, 250);

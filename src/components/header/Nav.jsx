@@ -8,7 +8,7 @@ function Nav(props) {
             <div>
                 <div className='logo'>
                     <Link to='/'>
-                        <img src={logo} alt='logo' width='100' />
+                        <img src={logo} alt='logo' />
                     </Link>
                 </div>
                 <div className='routes'>
@@ -18,6 +18,10 @@ function Nav(props) {
 
                     <div>
                         <Link to='/rates'>Rates</Link>
+                    </div>
+
+                    <div>
+                        <Link to='/Contacts'>Contact us</Link>
                     </div>
                 </div>
             </div>

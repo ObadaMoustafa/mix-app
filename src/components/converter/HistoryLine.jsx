@@ -7,13 +7,15 @@ function HistoryLine() {
     const [history, setHistory] = historyArr;
 
     function handleDelete(e) {
-        setHistory(prev => prev.filter(convert => convert.id !== e.target.id));
+        setHistory(prev =>
+            prev.filter(conversion => conversion.id !== e.target.id)
+        );
     }
     return (
         <>
             {history.length > 0 &&
-                history.map(convert => {
-                    const { from, to, amount, result, id } = convert;
+                history.map(conversion => {
+                    const { from, to, amount, result, id } = conversion;
                     return (
                         <div className='history-line-container' key={id}>
                             <div className='exchange-operation'>
