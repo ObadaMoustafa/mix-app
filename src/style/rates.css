@@ -11,7 +11,7 @@
     border-radius: var(--border-radius);
     padding: 3px;
 
-    animation: fade-in-left 1.5s;
+    animation: scale-up-hor-left 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) both;
 }
 
 .one-currency-rate > p {

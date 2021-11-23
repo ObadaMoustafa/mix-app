@@ -11,7 +11,8 @@
 :root {
     --main-width: 900px;
     --nav-height: 64px;
-    --transY: -100px;
+    --transY: translateY(-130px);
+    --transY-header-txt: translateY(-70px);
     --bg-color: rgb(10, 20, 110);
     --nav-bg-color: rgba(10, 20, 110, 0.342);
     --btn-color: rgb(0, 113, 235);
@@ -41,7 +42,7 @@
 }
 
 .route-container {
-    transform: translateY(var(--transY));
+    transform: var(--transY);
     width: 100%;
     box-shadow: rgb(134, 134, 134) 0px 0px 10px;
     background-color: #fff;

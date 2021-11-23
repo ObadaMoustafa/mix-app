@@ -5,7 +5,7 @@ function ConverterResult({ conversionResult, isLoading, errMsg }) {
         <>
             {errMsg && <p style={{ color: "red" }}>{errMsg}</p>}
             {isLoading && <p style={{ color: "red" }}>Loading ...</p>}
-            {conversionResult && (
+            {conversionResult && !isLoading && (
                 <div className='convert-result-container'>
                     <p className='main-result'>
                         {conversionResult.amount} {conversionResult.from} =

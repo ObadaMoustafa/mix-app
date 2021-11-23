@@ -118,15 +118,18 @@ input .field:hover {
 
 .convert-result-container {
     font-size: small;
+    animation: fade-in-bck 1.5s cubic-bezier(0.39, 0.575, 0.565, 1) both;
 }
 
-@keyframes fade-in-left {
+@keyframes fade-in-bck {
     0% {
-        transform: translateX(-50px);
+        -webkit-transform: translateZ(80px);
+        transform: translateZ(80px);
         opacity: 0;
     }
     100% {
-        transform: translateX(0);
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0);
         opacity: 1;
     }
 }
@@ -151,6 +154,21 @@ input .field:hover {
 }
 
 /****** Converter History *******/
+@keyframes scale-up-hor-left {
+    0% {
+        -webkit-transform: scaleX(0.4);
+        transform: scaleX(0.4);
+        -webkit-transform-origin: 0% 0%;
+        transform-origin: 0% 0%;
+    }
+    100% {
+        -webkit-transform: scaleX(1);
+        transform: scaleX(1);
+        -webkit-transform-origin: 0% 0%;
+        transform-origin: 0% 0%;
+    }
+}
+
 .history-container {
     margin-bottom: 30px;
     margin-top: 50px;
@@ -166,7 +184,7 @@ input .field:hover {
     align-items: center;
     margin: 5px 0;
 
-    animation: fade-in-left 1.5s;
+    animation: scale-up-hor-left 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) both;
 }
 
 .exchange-operation {
