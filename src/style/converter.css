@@ -219,6 +219,8 @@ input .field:hover {
     text-indent: "delete";
 }
 
+
+
 /****** media query for changing root properties *******/
 
 @media screen and (max-width: 900px) {

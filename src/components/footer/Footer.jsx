@@ -76,7 +76,15 @@ function Footer() {
                                     href='https://animista.net/'
                                     target='_blank'
                                     rel='noreferrer'>
-                                    animation
+                                    Animation
+                                </a>
+                            </li>
+                            <li>
+                                <a
+                                    href='https://loading.io/css/'
+                                    target='_blank'
+                                    rel='noreferrer'>
+                                    Spinner
                                 </a>
                             </li>
                         </ul>

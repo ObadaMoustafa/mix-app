@@ -4,7 +4,7 @@ function ConverterResult({ conversionResult, isLoading, errMsg }) {
     return (
         <>
             {errMsg && <p style={{ color: "red" }}>{errMsg}</p>}
-            {isLoading && <p style={{ color: "red" }}>Loading ...</p>}
+            {isLoading && <div className='lds-hourglass'></div>}
             {conversionResult && !isLoading && (
                 <div className='convert-result-container'>
                     <p className='main-result'>
