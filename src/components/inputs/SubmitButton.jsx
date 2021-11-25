@@ -1,12 +1,9 @@
 import React from "react";
 
-function SubmitButton({ amount, text }) {
+function SubmitButton({ disabled, text }) {
     return (
         <>
-            <button
-                type='submit'
-                className='filled-btn'
-                disabled={amount > 0 ? false : true}>
+            <button type='submit' className='filled-btn' disabled={disabled}>
                 {text}
             </button>
         </>

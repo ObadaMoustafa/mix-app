@@ -20,11 +20,13 @@ function ConverterForm() {
     const setHistory = historyArr[1];
 
     // switch button helper
-    const [switchValue, setSwitchValue] = useState(null);
+    // const [switchValue, setSwitchValue] = useState(null);
 
     function handleSubmitPairConversion(e) {
         e.preventDefault();
         setIsLoading(true);
+
+        // need to send request like that to the hook to store it with final result
         const request = {
             selectedCurrencyFrom,
             selectedCurrencyTo,
@@ -35,15 +37,11 @@ function ConverterForm() {
     }
 
     function handleSwitchValue() {
-        setSwitchValue(selectedCurrencyFrom);
-        setSelectedCurrencyFrom(selectedCurrencyTo);
+        const switchValue = [selectedCurrencyFrom, selectedCurrencyTo];
+        setSelectedCurrencyFrom(switchValue[1]);
+        setSelectedCurrencyTo(switchValue[0]);
     }
 
-    useEffect(() => {
-        if (switchValue) setSelectedCurrencyTo(switchValue);
-    }, [setSelectedCurrencyTo, switchValue]);
-
-    // I need another useEffect not to be affected by other value changes.
     useEffect(() => {
         if (conversionResult) setHistory(prev => [...prev, conversionResult]);
     }, [conversionResult, setHistory]);
@@ -78,7 +76,10 @@ function ConverterForm() {
                     isLoading={isLoading}
                     errMsg={errMsg}
                 />
-                <SubmitButton amount={amount} text='Convert' />
+                <SubmitButton
+                    disabled={amount > 0 ? false : true}
+                    text='Convert'
+                />
             </div>
         </form>
     );

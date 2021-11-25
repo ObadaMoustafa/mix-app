@@ -13,6 +13,7 @@ export function useFetchCurrencyData(url = null, url2 = null, url3 = null) {
         if (url) {
             async function getAvailableCodes() {
 
+                setErrMsg(null)
                 const { REACT_APP_EXCHANGE_RATE_APIKEY } = process.env
                 const endpoint = `https://v6.exchangerate-api.com/v6/${REACT_APP_EXCHANGE_RATE_APIKEY}/${url}`
                 try {
@@ -20,10 +21,9 @@ export function useFetchCurrencyData(url = null, url2 = null, url3 = null) {
                     const jsonData = await res.json()
                     if (res.status !== 200) throw new Error(jsonData["error-type"])
                     setData(jsonData)
-                    setErrMsg(null)
                 } catch (error) {
                     console.log(error)
-                    setErrMsg(error.toString())
+                    setErrMsg(error.message)
                 }
             }
             getAvailableCodes();
@@ -31,6 +31,7 @@ export function useFetchCurrencyData(url = null, url2 = null, url3 = null) {
 
         if (url2) {
             async function getPairCurrencyResult() {
+                setErrMsg(null)
                 const { selectedCurrencyFrom, selectedCurrencyTo, amount } = url2
                 const { REACT_APP_EXCHANGE_RATE_APIKEY } = process.env
                 const endpoint = `https://v6.exchangerate-api.com/v6/${REACT_APP_EXCHANGE_RATE_APIKEY}/pair/${selectedCurrencyFrom}/${selectedCurrencyTo}/${amount}`
@@ -49,10 +50,9 @@ export function useFetchCurrencyData(url = null, url2 = null, url3 = null) {
                     };
 
                     setConversionResult(convertRequest);
-                    setErrMsg(null)
                 } catch (error) {
                     console.error(error);
-                    setErrMsg(error.toString())
+                    setErrMsg(error.message)
                 }
                 finally {
                     setIsLoading(false)
@@ -64,6 +64,7 @@ export function useFetchCurrencyData(url = null, url2 = null, url3 = null) {
         if (url3) {
             async function getAllRates() {
 
+                setErrMsg(null)
                 const { REACT_APP_EXCHANGE_RATE_APIKEY } = process.env
                 const endpoint = `https://v6.exchangerate-api.com/v6/${REACT_APP_EXCHANGE_RATE_APIKEY}/latest/${url3}`
                 try {
@@ -71,10 +72,9 @@ export function useFetchCurrencyData(url = null, url2 = null, url3 = null) {
                     const jsonData = await res.json()
                     if (res.status !== 200) throw new Error(jsonData["error-type"])
                     setRates(jsonData.conversion_rates);
-                    setErrMsg(null)
                 } catch (error) {
                     console.error(error)
-                    setErrMsg(error.toString())
+                    setErrMsg(error.message)
                 } finally {
                     setIsLoading(false)
                 }
